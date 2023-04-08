@@ -1,6 +1,7 @@
 const Sequelize = require('sequelize');
 const { DataTypes } = require('sequelize');
 
+// Create new Sequelize instance using environmental variables for database connection
 const sequelize = new Sequelize(process.env.DB_DATABASE, process.env.DB_USERNAME, process.env.DB_PASSWORD, {
   host: process.env.DB_HOST,
   port: process.env.DB_PORT,
@@ -16,6 +17,7 @@ const sequelize = new Sequelize(process.env.DB_DATABASE, process.env.DB_USERNAME
   }
 });
 
+// Define User model
 const User = sequelize.define('User', {
     id: {
       type: DataTypes.STRING,
