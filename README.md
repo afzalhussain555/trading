@@ -54,10 +54,10 @@ Authorization (required): JWT token obtained from logging in
 
 
 
-## WebSocket Client
-The WebSocket client connects to a data source and forwards data to the frontend. The data source is a random data generator that mimics the behaviour of the stock market.
+## WebSocket
+The WebSocket client connects to a data source and forwards data to the frontend using socket.oi. The data source is a random data generator that mimics the behaviour of the stock market.
 
 Connect to the WebSocket server and listen for the "dashboard" event.
 
-Only authenticated user can listen to the socket.
+*Only authenticated user can listen to the socket.
 
